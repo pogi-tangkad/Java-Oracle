@@ -1,0 +1,92 @@
+<Project>
+  <Name>Capstone Project</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>HRApp</Name>
+    <Language>Java</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Employee</Name>
+        <Access>Public</Access>
+        <Location left="128" top="440" />
+        <Size width="333" height="264" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private int idNum</Member>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private double salary</Member>
+        <Member type="Constructor">public Employee(int idNum, String name, double salary)</Member>
+        <Member type="Method">public void setIDNum(int idNum)</Member>
+        <Member type="Method">public int getIDNum()</Member>
+        <Member type="Method">public void setName(String name)</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public double setSalary(double salary)</Member>
+        <Member type="Method">public void getSalary()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>HRApp</Name>
+        <Access>Public</Access>
+        <Location left="435" top="65" />
+        <Size width="263" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Department dep1 = new Department()</Member>
+        <Member type="Field">Employee emp1 = new Employee()</Member>
+        <Member type="Field">Employee emp2 = new Employee()</Member>
+        <Member type="Field">Employee emp3 = new Employee()</Member>
+        <Member type="Field">Employee emp4 = new Employee()</Member>
+        <Member type="Method">public static void main()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Department</Name>
+        <Access>Public</Access>
+        <Location left="740" top="409" />
+        <Size width="251" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String name</Member>
+        <Member type="Field">private Employee[] empArr = Employee[10]</Member>
+        <Member type="Field">private double salary</Member>
+        <Member type="Field">private static int empCount</Member>
+        <Member type="Field">private static int EMP_MAX</Member>
+        <Member type="Constructor">public Department()</Member>
+        <Member type="Method">public void addEmployee(Employee emp)</Member>
+        <Member type="Method">public Employee[] listEmployees()</Member>
+        <Member type="Method">public int getNumberOfEmployees()</Member>
+        <Member type="Method">public Employee isEmployeeID(int idNum)</Member>
+        <Member type="Method">public double totalSalary()</Member>
+        <Member type="Method">public double averageSalary()</Member>
+        <Member type="Method">public String toString()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="2" second="0">
+        <Label>Department array of Employees</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Dependency" first="2" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>734</X>
+          <Y>170</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Dependency" first="0" second="1">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>288</X>
+          <Y>167</Y>
+        </BendPoint>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
