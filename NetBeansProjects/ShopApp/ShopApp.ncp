@@ -1,0 +1,119 @@
+<Project>
+  <Name>Oracle-University</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>ShopApp</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Customer</Name>
+        <Access>Public</Access>
+        <Location left="359" top="13" />
+        <Size width="221" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private new String name = ""</Member>
+        <Member type="Field">private new String size</Member>
+        <Member type="Field">private Clothing[] items</Member>
+        <Member type="Constructor">public Customer()</Member>
+        <Member type="Constructor">public Customer(String name, int measurement)</Member>
+        <Member type="Constructor">public Customer(String name)</Member>
+        <Member type="Method">public String getName()</Member>
+        <Member type="Method">public void setName(String name)</Member>
+        <Member type="Method">public String getSize()</Member>
+        <Member type="Method">public void setSize(String size)</Member>
+        <Member type="Method">public void setSize(int measurement)</Member>
+        <Member type="Method">public void addItems(Clothing[] items)</Member>
+        <Member type="Method">public Clothing[] getItems()</Member>
+        <Member type="Method">public double getTotalClothingCost(int priceLimit)</Member>
+        <Member type="Method">public double averagePrice(String sizeCheck)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Clothing</Name>
+        <Access>Public</Access>
+        <Location left="798" top="152" />
+        <Size width="309" height="298" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private String description</Member>
+        <Member type="Field">private String size = "M"</Member>
+        <Member type="Field">private double price</Member>
+        <Member type="Field">public static double MIN_PRICE = 10.0</Member>
+        <Member type="Field">public static double TAX_RATE = 0.2</Member>
+        <Member type="Constructor">public Clothing(String des, String size, double price)</Member>
+        <Member type="Method">public String getDescription()</Member>
+        <Member type="Method">public void setDescription(String description)</Member>
+        <Member type="Method">public String getSize()</Member>
+        <Member type="Method">public void setSize(String size)</Member>
+        <Member type="Method">public double getPrice()</Member>
+        <Member type="Method">public void setPrice(double price)</Member>
+        <Member type="Method">public String showData()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ShopApp</Name>
+        <Access>Public</Access>
+        <Location left="252" top="461" />
+        <Size width="381" height="196" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">Customer c1 = new Customer("Pinky", 5)</Member>
+        <Member type="Field">Clothing item1 = new Clothing("Blue Jacket", "M", 20.9)</Member>
+        <Member type="Field">Clothing item2 = new Clothing("Orange T-Shirt", "S", 10.5)</Member>
+        <Member type="Field">Clothing item3 = new Clothing("Green Scarf", "S", 5.0)</Member>
+        <Member type="Field">Clothing item4 = new Clothing("Blue T-Shirt", "S", 10.5)</Member>
+        <Member type="Field">Clothing[] items = {item1, item2, item3, item4}</Member>
+        <Member type="Method">public static void main(String[] args)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="1" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>834</X>
+          <Y>475</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>710</X>
+          <Y>559</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="2">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>430</X>
+          <Y>370</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>430</X>
+          <Y>429</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="1">
+        <Label>Customer arrary of Clothing</Label>
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>614</X>
+          <Y>89</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>874</X>
+          <Y>120</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+        <StartMultiplicity>1</StartMultiplicity>
+        <EndMultiplicity>0..*</EndMultiplicity>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>
